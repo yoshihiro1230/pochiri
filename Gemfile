@@ -23,9 +23,13 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'anemone'
+gem "anemone", "~> 0.7.2"
 
-gem 'nokogiri'
+gem "nokogiri", "~> 1.6.1"
+
+gem "mongo", "~> 1.9.2"
+
+gem "bson_ext", "~> 1.9.2"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
