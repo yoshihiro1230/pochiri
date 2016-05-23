@@ -5,7 +5,7 @@ require 'kconv'
 urls = []
 urls.push("http://www.amazon.co.jp/gp/site-directory")
 
-Anemone.crawl(urls, :depth_limit => 1) do |anemone|
+Anemone.crawl(urls, :depth_limit => 0) do |anemone|
   PATTERN = %r[inside_bestsellers|bestsellers]
     anemone.on_pages_like(PATTERN) do |page|
     #文字コードをUTF8に変換したうえで、Nokogiriでパース

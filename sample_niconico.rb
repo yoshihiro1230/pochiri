@@ -19,6 +19,7 @@ Anemone.crawl(urls, :depth_limit => 0) do |anemone|
 
     items = doc.xpath("//div[@class=\"zg_itemRow\"]/div[1]/div[2]")
     items += doc.xpath("//div[@class=\"zg_itemRow\"]/div[2]/div[2]")
+    items = doc.xpath("//a[@class=\"a-size-base\"]/span")
     items.each{|item|
 
         # 順位
@@ -26,6 +27,8 @@ Anemone.crawl(urls, :depth_limit => 0) do |anemone|
 
         # 書名
         puts item.xpath("div[\"zg_title\"]/a").text
+
+        puts item.xpath("a[\"a-size-base\"]").text
 
         # ASIN
         puts item.xpath("div[\"zg_title\"]/a")
